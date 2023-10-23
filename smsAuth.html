@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/common.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/theme_default.css" /> -->
+	<title>본인인증</title>
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/sm.js"></script>
+    <script></script>
+</head>
+<body>
+	<div class="wrap">          
+        <div class="container_c has_foot_fix"> 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">본인인증</h2>
+                <span class="top_loca_num">
+                    <i class="on">1</i>
+                    <i>2</i>
+                    <i>3</i>
+                </span>
+            </section>
+            <section class="padd">
+                <h3 class="mt30 mb30 f20 lineH28 c_0">
+					비상장주식 거래신청을 위해<br/>
+					본인인증이 필요해요.
+				</h3>
+				<div>
+					<dl class="dl_info_list">
+						<dt><label for="inp_name" class="lineH20 f12 c_6">이름</label></dt>
+						<dd>							
+							<span class="inp_tx">
+								<input type="text" id="inp_name" placeholder="이름을 입력해주세요." value="" >
+							</span>
+						</dd>
+					</dl>
+					<dl class="dl_info_list mt24">
+						<dt><label for="inp_resi_num" class="lineH20 f12 c_6">주민등록번호</label></dt>
+						<dd class="resi_box">
+							<span class="inp_tx">
+								<input type="tel" id="inp_resi_num" maxlength="6" placeholder="앞 6자리 숫자">
+							</span>
+							<span class="inp_cbar"></span>
+							<span class="inp_tx">
+								<input type="tel" id="inp_resi_num2" maxlength="7" placeholder="뒷 7자리 숫자">
+							</span>
+						</dd>
+					</dl>
+					<dl class="dl_info_list mt24">
+						<dt><label for="inp_ph_num" class="lineH20 f12 c_6">휴대폰 번호</label></dt>
+						<dd class="tel_box">
+							<select class="sel" onchange="layPop2.on('pop2')">
+                                <option value="">SKT알뜰폰</option>
+                                <option value="">SKT</option>	
+                                <option value="">KT</option>								
+							</select>
+							<span class="inp_tx">
+								<input type="tel" id="inp_ph_num" maxlength="11" placeholder="-없이 입력">
+							</span>
+							<button class="btn btnGray40" id="authBtn" onclick="layPop.on('pop1');$('#authNum').show();$(this).text('재요청')" disabled >인증요청</button>
+						</dd>
+					</dl>
+
+                    <dl class="dl_info_list mt24" style="display:none" id="authNum">
+						<dt><label for="inp_auth_num" class="lineH20 f12 c_6">인증번호</label></dt>
+						<dd>							
+							<span class="inp_tx">
+								<input type="text" id="inp_auth_num" placeholder="인증번호를 입력해주세요." value="" onkeydown="$('#nextBtn').removeAttr('disabled')" >
+							</span>
+						</dd>
+					</dl>
+				</div>
+            </section>
+            
+            <section class="foot_fix">
+                <div class="foot_fix_btnA">
+					<button class="f_btn btnC2" id="nextBtn" disabled>다음</button>
+                </div>    
+            </section>
+        </div>
+
+        <div class="layPop" id="pop1" style="display:none">
+            <div class="layPopCon">
+                <div class="layPopIn ">
+                    <div class="ac f17 lineH25">인증번호가 발송되었습니다.</div>
+                </div>
+                <div class="layPopBtn ">
+                    <button class="btn btnC2" onclick="layPop.off('pop1')">확인</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="layPop2" id="pop2">
+            <div class="layPop2Con ">
+                <div class="layPop2Title mt25">휴대폰 인증 이용약관</div>
+                <div class="layPop2In">
+                    <ul class="posiul lineH20 f14 ml4">
+                        <li class="pl10">
+                            <span class="nm">·</span>
+                            개인정보 이용동의
+                            <button class="ico_arrow_r"></button>
+                        </li>
+                        <li class="pl10 mt12">
+                            <span class="nm">·</span>
+                            서비스 이용약관 동의
+                            <button class="ico_arrow_r"></button>
+                        </li>
+                        <li class="pl10 mt12">
+                            <span class="nm">·</span>
+                            고유식별정보 처리 동의
+                            <button class="ico_arrow_r"></button>
+                        </li>
+                        <li class="pl10 mt12">
+                            <span class="nm">·</span>
+                            통신사 이용약관 동의
+                            <button class="ico_arrow_r"></button>
+                        </li>
+                    </ul>
+                    <div class="mt20 mb20">
+                        <span class="inp_ck">
+                            <input type="checkbox" id="terms_agr"/>
+                            <label for="terms_agr" class="fB">[필수] 모두 동의합니다.</label>
+                        </span>
+                    </div>    
+                </div>
+                <div class="layPop2Btn">
+                    <button class="btn btnC2" onclick="layPop2.off('pop2');$('#authBtn').removeAttr('disabled')">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>	
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/common.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/theme_default.css" /> -->
+	<title>약관확인</title>
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/sm.js"></script>
+    <script></script>
+</head>
+<body>
+	<div class="wrap">          
+        <div class="container_c has_foot_fix"> 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">약관확인</h2>
+                <span class="top_loca_num">
+                    <i>1</i>
+                    <i class="on">2</i>
+                    <i>3</i>
+                </span>
+            </section>
+            <section class="padd">
+                <h3 class="mt30 mb30 f20 lineH28 c_0">
+					비상장주식 거래신청을 위해<br/>
+					동의가 필요해요.
+				</h3>
+               
+				<div class="mt24">
+                    <button class="btn_sel" onclick="layPop2.on('pop3')" id="btnSel">
+                        <span class="btn_sel_l" data-sel-opt="1">201-02-123456</span>
+                        <span class="btn_sel_r" data-sel-opt="2">[종합매매] 김엔투</span>
+                    </button>
+                </div>
+                <div class="mt20">
+                    <dl class="dl_terms_list">
+                        <dt class="pb15">
+                            <span class="inp_ck">
+                                <input type="checkbox" id="s_agr">
+                                <label for="s_agr" class="fB">서비스 이용 동의</label>
+                            </span>
+                            <button class="btn ico_arrow_r"></button>
+                        </dt>
+                        <dd class="mt12">
+                            <ul class="posiul lineH19 c_76 f13">
+                                <li class="pl10 mb8">
+                                    <span class="nm">·</span>
+                                    비상장주식 거래약관
+                                </li>
+                                <li class="pl10 mb8">
+                                    <span class="nm">·</span>
+                                    개인정보제공동의
+                                </li>
+                                <li class="pl10">
+                                    <span class="nm">·</span>
+                                    투자자 유의사항
+                                </li>
+                            </ul>
+
+                        </dd>
+                    </dl>
+
+                    <div class="comTit mt30">
+                        <span class="fB mr5">투자자 유의사항 이메일로 받기 </span>
+                        <span class="tipA">
+                            <a href="javascript:void(0)" class="ico_q" onclick="tooltip.on(this)"></a>
+                            <span class="tipBox active" style="left:-16.5rem">
+                                <strong class="tipTit">이메일 수신 유의사항</strong>    
+                                <span class="tipTx">
+                                    이메일이 없거나 변경된 경우, 등록(변경)한 후 
+                                    신청해 주세요. 네트워크/서버 상황, 스팸/수신거부 등록 등으로 
+                                    이메일이 수신되지 않거나 지연될 수 있습니다.
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="mt12">
+                        <span class="inp_ck">
+                            <input type="checkbox" id="invest_agr">
+                            <label for="invest_agr"><span class="f14">투자자 유의사항을 이메일로 받는 것에 동의합니다.</span></label>
+                        </span>
+                    </div>
+
+                    <dl class="dl_info_list mt24 mb40">
+						<dt><label for="inp_email" class="lineH20 f12 c_6">이메일 주소</label></dt>
+						<dd>							
+							<span class="inp_tx">
+								<input type="text" id="inp_email" placeholder="이메일 주소를 입력해주세요" value="" >
+							</span>
+						</dd>
+					</dl>
+				</div>
+            </section>
+            
+            <section class="foot_fix">
+                <div class="foot_fix_btnA">
+					<button class="f_btn btnC2" id="nextBtn" onclick="layPop.on('pop1_3')">다음</button>
+                </div>    
+            </section>
+        </div>
+
+        <div class="layPop" id="pop1_1" style="display:none">
+            <div class="layPopCon">
+                <div class="layPopIn ">
+                    <div class="ac f17 lineH25">서비스 이용에 동의해 주세요.</div>
+                </div>
+                <div class="layPopBtn">
+                    <button class="btn btnC2" onclick="layPop.off('pop1_1')">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layPop" id="pop1_2" style="display:none">
+            <div class="layPopCon">
+                <div class="layPopIn ">
+                    <div class="ac f17 lineH25">투자자 유의사항 이메일 발송에 <br/>동의해 주세요.</div>
+                </div>
+                <div class="layPopBtn">
+                    <button class="btn btnC2" onclick="layPop.off('pop1_2')">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layPop" id="pop1_3" style="display:none">
+            <div class="layPopCon">
+                <div class="layPopIn ">
+                    <div class="ac f17 lineH25">
+                        등록된 이메일이 없습니다.<br/>
+                        이메일 등록 후 신청해 주세요.
+                    </div>
+                </div>
+                <div class="layPopBtn">
+                    <button class="btn btnC1" onclick="layPop.off('pop1_3')">닫기</button>
+                    <button class="btn btnC2" onclick="layPop.off('pop1_3')">확인</button>
+                </div>
+            </div>
+        </div>
+     
+        <div class="layPop2" id="pop3">
+            <div class="layPop2Con noBtn">
+                <div class="layPop2Title mt25">계좌 선택</div>
+                <div class="layPop2In">
+                    <ul class="ul_sel">
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-02-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매1] 김나무</i>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-12-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매2] 박나무</i>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-22-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매3] 홍나무</i>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-32-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매4] 정나무</i>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-42-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매5] 유나무</i>
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="ulSel.on(this,'btnSel');layPop2.off('pop3')">
+                                <span class="ul_sel_opt">
+                                    <i class="ul_sel_opt1" data-opt="1">201-52-123456</i>
+                                    <i class="ul_sel_opt2" data-opt="2">[종합매매6] 변나무</i>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="layPop2Close" onclick="layPop2.off('pop3')"><i class="blind">닫기</i></button>
+            </div>
+        </div>
+       
+        <!-- 약정가능계좌 없을시 -->
+        <div class="layFullPop" id="pop4">
+            <div class="header_c">
+                <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('pop4')"> </a>
+                <h1 class="hc_tit">약관 및 개인(신용)정보 동의</h1>
+            </div> 
+            <div class="container_c has_foot_fix"> 
+                <section class="padd">
+                    <h3 class="mt30 f20 lineH28 c_0">
+                        비상장주식 거래신청을 위해<br/>
+                        동의가 필요해요.
+                    </h3>
+                    <dl class="dl_terms_list mt24 active">
+                        <dt class="pb15">
+                            <span class="inp_ck">
+                                <input type="checkbox" id="all_agr">
+                                <label for="all_agr" class="fB">모두동의</label>
+                            </span>
+                            <button class="btn ico_arrow_r"></button>
+                        </dt>
+                        <dd class="mt12">
+                            <ul class="posiul lineH19 c_76 f13">
+                                <li class="pl0 mb8">
+                                    <span class="inp_ck_line">
+                                        <input type="checkbox" id="terms1"/>
+                                        <label for="terms1" class="c_6">[필수] 개인(신용)정보 수집 이용 동의</label>
+                                    </span>                                    
+                                    <button class="ico_arrow_r arrow_s"></button>
+                                </li>
+                                <li class="pl0 mb8">
+                                    <span class="inp_ck_line">
+                                        <input type="checkbox" id="terms2"/>
+                                        <label for="terms2" class="c_6">[필수] 계좌개설 약관 및 설명서</label>
+                                    </span>
+                                    <button class="ico_arrow_r arrow_s"></button>
+                                </li>
+                                <li class="pl0 mb8">
+                                    <span class="inp_ck_line">
+                                        <input type="checkbox" id="terms3"/>
+                                        <label for="terms3" class="c_6">[필수] 서비스 이용 약관</label>
+                                    </span>
+                                    <button class="ico_arrow_r arrow_s"></button>
+                                </li>
+                                <li class="pl0">
+                                    <span class="inp_ck_line">
+                                        <input type="checkbox" id="terms4"/>
+                                        <label for="terms4" class="c_6">[필수] 주요 안내 / 위험 고지</label>
+                                    </span>
+                                    <button class="ico_arrow_r arrow_s"></button>
+                                </li>
+                            </ul>
+
+                        </dd>
+                    </dl>
+                    
+                    <dl class="dl_terms_list mt12 ">
+                        <dt class="b0">
+                            <span class="inp_ck_s">
+                                <input type="checkbox" id="terms5">
+                                <label for="terms5" >[선택] 마케팅을 위한 정보 수집·이용동의</label>
+                            </span>
+                            <i class="icoLabel1 ml4">안심</i>
+                        </dt>
+                    </dl>
+
+                    <dl class="dl_terms_list mt12 mb40">
+                        <dt class="pb15">
+                            <span class="inp_ck_s">
+                                <input type="checkbox" id="terms6">
+                                <label for="terms6">[선택] 마케팅 정보 수신 동의</label>
+                            </span>
+                            <i class="icoLabel1 ml4">안심</i>
+                        </dt>
+                        <dd>
+                            <ul class="list_item_4">
+                                <li>
+                                    <span class="inp_ck_s">
+                                        <input type="checkbox" id="m1">
+                                        <label for="m1">전화</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="inp_ck_s">
+                                        <input type="checkbox" id="m2">
+                                        <label for="m2">SMS</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="inp_ck_s">
+                                        <input type="checkbox" id="m3">
+                                        <label for="m3">이메일</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="inp_ck_s">
+                                        <input type="checkbox" id="m4">
+                                        <label for="m4">PUSH</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="inp_ck_s">
+                                        <input type="checkbox" id="m5">
+                                        <label for="m5">DM</label>
+                                    </span>
+                                </li>
+                                
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+                <section class="foot_fix">
+                    <div class="foot_fix_btnA">
+                        <button class="f_btn btnC2" id="nextBtn" onclick="layPop.off('pop4')">다음</button>
+                    </div>    
+                </section>
+            </div>
+        </div>
+    </div>	
+</body>
+</html>

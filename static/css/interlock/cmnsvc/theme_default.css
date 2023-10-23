@@ -1,0 +1,12 @@
+@charset "euc-kr";
+/****************************************/
+/*  Version : 1.0
+/*  Author : jsm
+/****************************************/
+
+/* theme_defaut */
+:root{
+    --theme:red;
+    --themeL:#F9FDF4;
+}
+.ico_ok{display:inline-flex;width:4.8rem;height: 4.8rem;background:url(/static/images/interlock/cmnsvc/ico_ok.png) 0 0 no-repeat;background-size: 4.8rem auto;}

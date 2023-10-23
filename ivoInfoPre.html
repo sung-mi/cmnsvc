@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/common.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/theme_default.css" /> -->
+	<title>약정</title>
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/sm.js"></script>
+    <script></script>
+</head>
+<body>
+	<div class="wrap"> 
+        <div class="header_c">
+            <h1 class="hc_tit">투자자정보 확인서</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div> 
+        <div class="container_c has_foot_fix"> 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">투자성향확인</h2>
+                <span class="top_loca_num">
+                    <i>1</i>
+                    <i>2</i>
+                    <i class="on">3</i>
+                </span>
+            </section>
+            <section class="padd">
+                <div class="result_cbox mt30"> 
+                    <div class="rcbox1">
+                        <span class="rcicons">
+                            <i class="btnLabelWh">투자자정보 제공</i>
+                            <i class="btnLabelWh">투자권유 희망</i>
+                            <!-- <i class="btnLabelGrn">라벨</i>
+                            <i class="btnLabelBl">라벨</i>
+                            <i class="btnLabelPur">라벨</i> -->
+                        </span>
+                        <h3 class="rcb1txt mt5">고객님의 투자성향은</h3>
+                        <div class="rcb1txt_out">
+                            <h3 class="rcb1txt fB">적극투자형</h3>
+                            <span class="tipA">
+                                <a href="javascript:void(0)" class="ico_q" onclick="tooltip.on(this)"></a>
+                                <span class="tipBox active" style="left:-10.9rem">
+                                    <span style="width:31rem">
+                                        <div class="tbS st">
+                                            <table>
+                                                <caption>투자자성향별 적합한 투자성 상품 : 구분, 초저위험, 저위험, 중위험, 고위험, 초고위험 등의 정보제공</caption>
+                                                <colgroup><col width="70px"/><col/><col/><col/><col/><col/></colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">초저위험</th>
+                                                        <th scope="col">저위험</th>
+                                                        <th scope="col">중위험</th>
+                                                        <th scope="col">고위험</th>
+                                                        <th scope="col">초고위험</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="tbgc1">
+                                                        <td class="ac">안정형</td>
+                                                        <td><i class="tbarS tbarE"></i></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="tbgc2">
+                                                        <td class="ac">안정추구형</td>
+                                                        <td><i class="tbarS"></i></td>
+                                                        <td><i class="tbarE"></i></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="tbgc2">
+                                                        <td class="ac">위험중립형</td>
+                                                        <td><i class="tbarS"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarE"></i></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="tbgc3">
+                                                        <td class="ac">적극투자형</td>
+                                                        <td><i class="tbarS"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarE"></i></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="tbgc3">
+                                                        <td class="ac">공격투자형</td>
+                                                        <td><i class="tbarS"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarC"></i></td>
+                                                        <td><i class="tbarE"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rcbox2">
+                        <dl class="rcb2txt mt0">
+                            <dt>거래할 상품의 위험등급</dt>
+                            <dd class="c_rd">초고위험</dd>
+                        </dl>
+                        <dl class="rcb2txt">
+                            <dt>성향만료일</dt>
+                            <dd>2025.08.06</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <section class="padd"  style="display:none">
+                <div class="confirm_cbox mt40">
+                    <i class="ico_warnning"></i> 
+                    <h3 class="confirm_cbox_tit mt20 mb30">
+                        상품 거래가 제한되었습니다.<br/>
+                        <span class="c_rd f14">투자자정보확인서(투자자성향)를 등록해주세요.</span>
+                    </h3>
+                </div>
+            </section>
+            <section class="foot_fix">
+                <div class="padd"> 
+                    <div class="info_cbox c_6 lineH19 f13">오늘 고객님의 투자성향 진단 횟수는 <span class="c_0">3</span>회 입니다.</div>
+                    <ul class="posiul lineH19 f13 c_6 mt10 mb30">
+                        <li class="pl10 mb5"> 
+                            <span class="nm">·</span>
+                            투자자 보호를 위해 ‘투자자정보 제공’에 의한 투자자성향 진단횟수를 1일 3회로 제한하고 있습니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot_fix_btnA">
+                    <a href="javascript:void(0)" class="f_btn btnC1" onclick="layPop.on('pop1')">투자성향 변경</a>
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop2.on('sel2')">현재 투자성향 유지</a>
+                </div>    
+            </section>
+        </div>
+
+        <div class="layPop" id="pop1" style="display:none">
+            <div class="layPopCon">
+                <div class="layPopIn ">
+                    <div class="ac f17 lineH25">전문금융소비자는 <br/>거래신청이 불가합니다.</div>
+                </div>
+                <div class="layPopBtn ">
+                    <button class="btn btnC2" onclick="layPop.off('pop1')">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>	
+</body>
+</html>

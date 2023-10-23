@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/common.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/interlock/cmnsvc/theme_default.css" /> -->
+	<title>약정</title>
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/sm.js"></script>
+    
+</head>
+<body>
+    <!-- 미희망 & 제공 -->
+	<div class="layFullPop" id="fullpop1">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop1');"></a>
+            <h1 class="hc_tit">투자자정보 확인서</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div> 
+        <div class="container_c has_foot_fix">
+            <section class="padd">
+                <h3 class="comTit mt20 fB">일반금융소비자 투자성향 진단</h3> 
+                <style>
+                   </style>
+                <div class="">
+                    <dl class="dl_sel_list mt12">
+                        <dt>투자권유 희망여부</dt>
+                        <dd>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd1_1" name="rd1" disabled/>
+                                <label for="rd1_1" class="btn btnWh30">희망</label>
+                            </span>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd1_2" name="rd1" checked/>
+                                <label for="rd1_2" class="btn btnWh30">미희망</label>
+                            </span>                            
+                        </dd>
+                    </dl>
+                    <dl class="dl_sel_list mt12">
+                        <dt>
+                            <span class="mr5">투자자 정보 </span> 
+                            <span class="tipA">
+                                <a href="javascript:void(0)" class="ico_q" onclick="tooltip.on(this)"></a>
+                                <span class="tipBox active" style="left:-5rem">
+                                    <strong class="tipTit">투자자 정보 </strong>    
+                                    <span class="tipTx">
+                                        투자자 정보 
+                                    </span>
+                                </span>
+                            </span>
+                        </dt>
+                        <dd>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd2_1" name="rd2" checked/>
+                                <label for="rd2_1" class="btn btnWh30">제공</label>
+                            </span>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd2_2" name="rd2" disabled/>
+                                <label for="rd2_2" class="btn btnWh30">미제공</label>
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+            </section> 
+            <section class="sec_bar mt25 mb20"></section>
+            <section class="padd mb40">   
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">01.</span>
+                        고객님의 연령대는 어떻게 되시나요?
+                    </dt>
+                    <dd class="svy_a cols2">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_1" name="svy1">
+                            <label for="svy1_1">만19세미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_2" name="svy1">
+                            <label for="svy1_2">만19세 ~ 만40세</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_3" name="svy1">
+                            <label for="svy1_3">만41세 ~ 만50세</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_4" name="svy1">
+                            <label for="svy1_4">만51세 ~ 만64세</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_5" name="svy1">
+                            <label for="svy1_5">만65세 ~ 만79세</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy1_6" name="svy1">
+                            <label for="svy1_6">만80세 이상</label>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">02.</span>
+                        고객님의 연소득금액(급여, 금융소득 등) 금액은 어느 정도 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy2_1" name="svy2">
+                            <label for="svy2_1">5천만원 이하</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy2_2" name="svy2">
+                            <label for="svy2_2">5천만원 초과 ~ 7천만원</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy2_3" name="svy2">
+                            <label for="svy2_3">7천만원 초과 ~ 1억원</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy2_4" name="svy2">
+                            <label for="svy2_4">1억원 초과</label>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">03.</span>
+                        고객님의 전체 자산 중 금융자산의 비중은 어느 정도 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy3_1" name="svy3">
+                            <label for="svy3_1">10% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy3_2" name="svy3">
+                            <label for="svy3_2">10% ~ 20% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy3_3" name="svy3">
+                            <label for="svy3_3">20% ~ 30% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy3_4" name="svy3">
+                            <label for="svy3_4">50% 이상</label>
+                        </span>
+                        
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">04.</span>
+                        고객님의 전체 자산 중 투자성상품(주식, 펀드 등)의 비중은 어느 정도 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy4_1" name="svy4">
+                            <label for="svy4_1">10% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy4_2" name="svy4">
+                            <label for="svy4_2">10% ~ 20% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy4_3" name="svy4">
+                            <label for="svy4_3">20% ~ 30% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy4_4" name="svy4">
+                            <label for="svy4_4">30% ~ 50% 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy4_5" name="svy4">
+                            <label for="svy4_5">50% 이상</label>
+                        </span>                        
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">05.</span>
+                        고객님께서 투자경험이 있는 금융상품을 모두 선택해주세요.
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy5_1">
+                            <label for="svy5_1">예금, CMA, MMF, RP, 국공채 등</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy5_2">
+                            <label for="svy5_2">채권형펀드, 원금보장형 ELB/DLB, 금융채 등 </label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy5_3">
+                            <label for="svy5_3">혼합형펀드, 원금부분보장형 ELS/DLS, 일반회사채</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy5_4">
+                            <label for="svy5_4">주식, 주식형펀드, 원금비보장형 ELS/DLS, 고위험회사채</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy5_5">
+                            <label for="svy5_5">파생상품펀드, ELW, 선물·옵션, 주식신용거래 등</label>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">06.</span>
+                        고객님께서 금융상품을 투자하는 목적을 모두 선택해주세요.
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_1" name="svy6">
+                            <label for="svy6_1">교육비</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_2" name="svy6">
+                            <label for="svy6_2">생활비</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_3" name="svy6">
+                            <label for="svy6_3">결혼자금</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_4" name="svy6">
+                            <label for="svy6_4">채무상환</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_5" name="svy6">
+                            <label for="svy6_5">주택마련자금</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy6_6" name="svy6">
+                            <label for="svy6_6">자산증식자금</label>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">07.</span>
+                        고객님께서 금융상품을 투자하는 목적을 모두 선택해주세요.
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy7_1">
+                            <label for="svy7_1">초저위험(CMA, RP 등) 금융상품의 내용만 이해하고 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy7_2">
+                            <label for="svy7_2">널리 알려진 금융상품(주식, 채권, 펀드 등)의 구조 및 위험 등을 일정 부분 이해하고 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy7_3">
+                            <label for="svy7_3">널리 알려진 금융상품(주식, 채권, 펀드 등)의 구조 및 위험 등을 깊이 있게 이해하고 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy7_4">
+                            <label for="svy7_4">파생상품을 포함한 대부분의 금융상품 구조 및 위험 등을 이해하고 있음</label>
+                        </span>                        
+                    </dd>
+                    <dd class="mt12">
+                        <ul class="posiul f10 lineH14 c_76 ">
+                            <li class="pl15">
+                                <span class="nm">※</span>
+                                해당 문항은 당일 투자성향 등록 이력이 있는 경우 선택되지 않습니다.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">08.</span>
+                        투자 자금의 투자 예정 기간은 얼마나 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy8_1">
+                            <label for="svy8_1">1년 미만</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy8_2">
+                            <label for="svy8_2">1년 이상 ~ 3년 미만</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy8_3">
+                            <label for="svy8_3">3년 이상</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy8_4">
+                            <label for="svy8_4">투자기관과 상관없이 만기일까지 보유</label>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">09.</span>
+                        투자를 통해 기대하는 수익과 감내 할 수 있는 손실의 중요도는 어떻게 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy9_1">
+                            <label for="svy9_1">투자 수익보다 원금 보존이 더 중요함</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy9_2">
+                            <label for="svy9_2">원금 보존보다 투자 수익이 더 중요함</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy9_3">
+                            <label for="svy9_3">손실 위험이 있더라도 투자 수익이 중요함</label>
+                        </span>
+                    </dd>
+                    <dd class="mt12">
+                        <ul class="posiul f10 lineH14 c_76">
+                            <li class="pl15">
+                                <span class="nm">※</span>
+                                해당 문항은 당일 투자성향 등록 이력이 있는 경우 선택되지 않습니다.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">10.</span>
+                        금융상품 투자 시 감내할 수 있는 손실은 어느 정도 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy10_1">
+                            <label for="svy10_1">손실을 원하지 않음 (무조건 원금 보전)</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy10_2">
+                            <label for="svy10_2">원금의 30%까지 감내할 수 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy10_3">
+                            <label for="svy10_3">원금의 50%까지 손실은 감내할 수 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy10_4">
+                            <label for="svy10_4">원금의 100%까지 손실은 감내할 수 있음</label>
+                        </span>
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="svy10_5">
+                            <label for="svy10_5">원금 초과 손실까지 감내할 수 있음</label>
+                        </span>                        
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">11.</span>
+                        파생상품(선물옵션, ELW, ELS/DLS, 파생상품펀드 등)에 대한 투자경험은 얼마나 되시나요?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy11_1" name="svy11">
+                            <label for="svy11_1">투자경험없음</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy11_2" name="svy11">
+                            <label for="svy11_2">1년 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy11_3" name="svy10">
+                            <label for="svy11_3">1년 이상 ~ 3년 미만</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy11_4" name="svy11">
+                            <label for="svy11_4">3년 이상</label>
+                        </span>                        
+                    </dd>
+                </dl>
+                <dl class="svy_list">
+                    <dt class="svy_q fM">
+                        <span class="svy_nm">12.</span>
+                        고객님께서는 취약 투자자에 해당되십니까?
+                    </dt>
+                    <dd class="svy_a">
+                        <span class="inp_rd">
+                            <input type="radio" id="svy12_1" name="svy12">
+                            <label for="svy12_1">예</label>
+                        </span>
+                        <span class="inp_rd">
+                            <input type="radio" id="svy12_2" name="svy12">
+                            <label for="svy12_2">아니오</label>
+                        </span>                        
+                    </dd>
+                    <dd class="mt12">
+                        <ul class="posiul f10 lineH14 c_76">
+                            <li class="pl10">
+                                <span class="nm">*</span>
+                                취약 투자자: 고령투자자/미성년자/금융상품 투자경험이 없는 분 등이 대상이며, 
+                                금융상품 투자 시 불이익에 대한 정보를 다른 정보보다 우선하여 설명 받으실 수 있습니다.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA">
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.on('fullpop1_1');layPop.off('fullpop1')">다음</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+    
+    <!-- 완판케이스: 투자권유N_적합 -->
+    <div class="layFullPop" id="fullpop1_1">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop1_1');"></a>
+            <h1 class="hc_tit">투자자 확인사항</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix"> 
+            <section>
+                <h2 class="mt30 mb20 f20 lineH28 c_0 padd">
+					투자권유 희망 및 <br/> 투자자정보 제공 확인서
+				</h2>               
+                <h3 class="comTit fB padd">금융소비자 확인사항</h3>
+                <div class="tbS mt12">
+                    <table>
+                        <caption>금융소비자 확인사항 : 투자권유 희망 여부, 투자자정보 제공 여부 등의 정보제공</caption>
+                        <colgroup><col width="144px"/><col/></colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="al">투자권유 희망 여부</th>
+                                <td><span class="c_rd f14">투자권유를 희망하지 않습니다.</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="al">투자자정보 제공 여부</th>
+                                <td><span class="c_rd f14">투자자정보를 제공합니다.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="padd">
+                    <ul class="posiul lineH19 c_6 f13 mt12">
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>                            
+                            투자권유를 희망하지 않거나 투자자정보를 제공하지 않는 경우에는 고객의 별도의사가 있기 전까진 회사가 투자권유를 할 수 없습니다.
+                        </li>
+                        <li class="pl10">
+                            <i class="nm">·</i>
+                            투자 시 원금 손실이 발생할 수 있으며, 투자 손익에 대한 책임은 모두 고객에게 귀속됩니다.
+                        </li>
+                    </ul>
+                    <h3 class="comTit fB mt24">유의사항</h3>
+                    <ul class="posiul lineH19 c_6 f13 mt12">
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            귀하께서 <span class="c_rd">투자권유를 희망하지 않거나 투자자정보를 제공하지 않는 경우</span> 
+                            금융회사는 <span class="c_rd">*적합성원칙 준수의무를 부담하지 않습니다.</span> 
+                            <ul class="posiul f10 c_76 mt5 lineH14">
+                                <li class="pl10">
+                                    <span class="nm mt2">*</span>
+                                    적합성원칙(금융소비자 보호에 관한 법률 제17조): 소비자의 재산상황, 
+                                    금융상품 취득·처분 경험 등 파악하고, 소비자에게 부적합한 금융상품의 계약 체결 권유를 금지
+                                </li>    
+                            </ul>
+                        </li>
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            <span class="c_rd">
+                            귀하께서 투자권유를 희망하지 않거나 설명을 요청하지 않는 경우 금융회사는 *설명의무를 부담하지 않습니다.
+                            </span>
+                            <ul class="posiul f10 c_76 mt5 lineH14">
+                                <li class="pl10">
+                                    <span class="nm mt3">*</span>
+                                    설명의무(금융소비자 보호에 관한 법률 제19조): 금융상품의 중요사항을 
+                                    금융소비자가 이해할 수 있도록 설명
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="posiul f10 lineH14 c_76 mb55">
+                        <li class="pl15">
+                            <i class="nm">※</i>
+                            본 확인서는 향후 분쟁 또는 소송이 발생하는 경우 귀하의 권리구제에 불리하게 사용될 수 있으므로 신중하게 작성할 필요가 있습니다.
+                        </li>
+                    </ul>
+                    <div class="mb15">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="cus_agr"/>
+                            <label for="cus_agr">
+                                금융소비자 확인사항 및 유의사항을 읽고 이해하였음을 확인합니다.
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA">
+                    <a href="javascript:void(0)" class="f_btn btnC2"  onclick="layPop.on('fullpop1_2');layPop.off('fullpop1_1')">다음</a>
+                </div>    
+            </section>
+            
+        </div>
+    </div>
+
+    <!-- 완판케이스: 투자권유Y_부적합 -->
+    <div class="layFullPop" id="fullpop1_2">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop1_2');"></a>
+            <h1 class="hc_tit">투자자 확인사항</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix"> 
+            <section>
+                <h2 class="mt30 mb20 f20 lineH28 c_0 padd">
+                    투자성향에 적합(적정)하지 않은 <br/> 투자성상품 거래 확인서
+				</h2>               
+                <h3 class="comTit fB padd">금융소비자 확인사항</h3>
+                <div class="tbS mt12">
+                    <table>
+                        <caption>금융소비자 확인사항 : 투자자성향, 투자자정보 제공 여부 등의 정보제공</caption>
+                        <colgroup><col width="155px"/><col/></colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="al">투자자성향</th>
+                                <td><span class="c_rd f14">위험중립형</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="al">투자성 상품의 위험등급</th>
+                                <td><span class="c_rd f14">초고위험</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="padd">
+                    <h3 class="comTit fB mt24">유의사항</h3>
+                    <ul class="posiul lineH19 c_6 f13 mt12">
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            투자자성향 대비 위험도가 높은 투자성 상품 가입시 금융회사는 투자권유를 할 수 없으므로 본인 판단하에 투자여부를 결정하셔야 합니다.
+                        </li>
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            귀하께서 투자권유를 희망하지 않는 경우 금융회사는 *적합성원칙 준수 의무를 부담하지 않습니다.
+                            <ul class="posiul f10 c_76 mt5 lineH14">
+                                <li class="pl10">
+                                    <span class="nm mt2">*</span>
+                                    적합성원칙(금융소비자 보호에 관한 법률 제17조): 소비자의 재산상황, 금융상품 취득·처분 경험 등 파악하고, 
+                                    소비자에게 부적합한 금융상품의 계약 체결 권유를 금지
+                                </li>    
+                            </ul>
+                        </li>
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            귀하께서 투자권유를 희망하지 않거나 설명을 요청하지 않는 경우 금융회사는 *설명의무를 부담하지 않습니다.
+                            <ul class="posiul f10 c_76 mt5 lineH14">
+                                <li class="pl10">
+                                    <span class="nm mt2">*</span>
+                                    설명의무(금융소비자 보호에 관한 법률 제19조): 금융상품의 중요사항을 금융소비자가 이해할 수 있도록 설명
+                                </li>    
+                            </ul>
+                        </li>
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            투자시 원금 손실이 발생할 수 있으며, 투자 손익에 대한 책임은 모두 고객에게 귀속됩니다.
+                        </li>
+                        <li class="pl10 mb6">
+                            <i class="nm">·</i>
+                            투자자성향 대비 고위험 상품에 투자하는 경우에는 예상보다 더 큰 폭의 손실이 발생할 수 있습니다.
+                           
+                        </li>
+                    </ul>
+                    <ul class="posiul f10 lineH14 c_76">
+                        <li class="pl15 mb6">
+                            <i class="nm">※</i>
+                            귀하께서 투자권유를 희망하지 않더라도 *적정성원칙 대상 투자성 상품을 가입하고자 할 경우에는 금융회사는 
+                            면담·질문 등을 통해 해당상품이 귀하에게 부적정하다고 판단하는 경우 
+                            평가결과 및 그 사유를 기재한 적정성 판단 보고서를 제공하고 있으니 이를 충분히 검토하고 가입할 필요가 있습니다.
+                            <ul class="posiul f10 c_76 mt5 lineH14">
+                                <li class="pl10">
+                                    <span class="nm mt2">*</span>
+                                    적정성원칙(금융소비자 보호에 관한 법률 제18조): 소비자가 자발적으로 구매하려는 금융상품이 소비자의 
+                                    재산 등에 비추어 부적정할 경우 그 사실을 소비자에게 고지하고 확인할 의무
+                                </li>    
+                            </ul>
+                        </li>
+                        <li class="pl15">
+                            <i class="nm">※</i>
+                            본 확인서는 향후 분쟁 또는 소송이 발생하는 경우 귀하의 권리구제에 불리하게 사용될 수 있으므로 신중하게 작성할 필요가 있습니다.
+                        </li>
+                    </ul>
+                    <div class="mt30 mb55 mt">
+                        <h3 class="comTit fB">투자자성향별 적합한 투자성 상품</h3>
+                        <div class="tbS mt12 st">
+                            <table>
+                                <caption>투자자성향별 적합한 투자성 상품 : 구분, 초저위험, 저위험, 중위험, 고위험, 초고위험 등의 정보제공</caption>
+                                <colgroup><col width="70px"/><col/><col/><col/><col/><col/></colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">초저위험</th>
+                                        <th scope="col">저위험</th>
+                                        <th scope="col">중위험</th>
+                                        <th scope="col">고위험</th>
+                                        <th scope="col">초고위험</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tbgc1">
+                                        <td class="ac">안정형</td>
+                                        <td><i class="tbarS tbarE"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="tbgc2">
+                                        <td class="ac">안정추구형</td>
+                                        <td><i class="tbarS"></i></td>
+                                        <td><i class="tbarE"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="tbgc2">
+                                        <td class="ac">위험중립형</td>
+                                        <td><i class="tbarS"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarE"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="tbgc3">
+                                        <td class="ac">적극투자형</td>
+                                        <td><i class="tbarS"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarE"></i></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="tbgc3">
+                                        <td class="ac">공격투자형</td>
+                                        <td><i class="tbarS"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarC"></i></td>
+                                        <td><i class="tbarE"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mb15">
+                        <span class="inp_ck_s">
+                            <input type="checkbox" id="cus_agr2"/>
+                            <label for="cus_agr2">
+                                금융소비자 확인사항 및 유의사항을 읽고 이해하였음을 확인합니다.
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA">
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.on('fullpop2');layPop.off('fullpop1_2')">확인</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+
+    <!-- 미희망 & 미제공 -->
+    <div class="layFullPop" id="fullpop2">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop2');"></a>
+            <h1 class="hc_tit">투자자정보 확인서</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix"> 
+            <section class="padd">
+                <h3 class="comTit mt20 fB">일반금융소비자 투자성향 진단</h3> 
+                <style>
+                   </style>
+                <div class="">
+                    <dl class="dl_sel_list mt12">
+                        <dt>투자권유 희망여부</dt>
+                        <dd>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd3_1" name="rd3" disabled/>
+                                <label for="rd3_1" class="btn btnWh30">희망</label>
+                            </span>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd3_2" name="rd3" checked/>
+                                <label for="rd3_2" class="btn btnWh30">미희망</label>
+                            </span>                            
+                        </dd>
+                    </dl>
+                    <dl class="dl_sel_list mt12">
+                        <dt>
+                            <span class="mr5">투자자 정보 </span> 
+                            <span class="tipA">
+                                <a href="javascript:void(0)" class="ico_q" onclick="tooltip.on(this)"></a>
+                                <span class="tipBox active" style="left:-5rem">
+                                    <strong class="tipTit">투자자 정보 </strong>    
+                                    <span class="tipTx">
+                                        투자자 정보 
+                                    </span>
+                                </span>
+                            </span>
+                        </dt>
+                        <dd>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd4_1" name="rd4" disabled/>
+                                <label for="rd4_1" class="btn btnWh30">제공</label>
+                            </span>
+                            <span class="btn_rd">
+                                <input type="radio" id="rd4_2" name="rd4" checked/>
+                                <label for="rd4_2" class="btn btnWh30">미제공</label>
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+            </section> 
+            <section class="sec_bar mt25 mb20"></section>
+            <section class="padd">
+                <div class="f14 lineH20 c_76">
+                투자권유를 희망하지 않는 경우 ‘투자권유 희망 및 투자자 정보 제공 여부 확인서’를 작성하셔야 합니다.
+                </div>
+                <div class="mt12 mb30">
+                    <span class="inp_ck_s">
+                        <input type="checkbox" id="confirm_agr">
+                        <label for="confirm_agr">투자권유 희망 및 투자자정보 제공 여부 확인서</label>
+                    </span>
+                </div>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA">
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.on('fullpop3_1');layPop.off('fullpop2')">다음</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+
+    <!-- 약관팝업_1-->
+    <div class="layFullPop has_termsA" id="fullpop3_1">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop3_1');"></a>
+            <h1 class="hc_tit">서비스 이용 동의</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix"> 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">비상장주식 거래약관</h2>
+                <span class="top_loca_num">
+                    <i class="on">1</i>
+                    <i>2</i>
+                    <i>3</i>
+                </span>
+            </section>
+            <section class="termsA">               
+                <iframe src="https://www.nhqv.com/terms/terms370.jsp" frameborder="0"></iframe>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA cols1vs2">
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.on('fullpop3_2');layPop.off('fullpop3_1')">다음</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+
+    <!-- 약관팝업_2-->
+    <div class="layFullPop has_termsA" id="fullpop3_2">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop3_2');"></a>
+            <h1 class="hc_tit">서비스 이용 동의</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix" > 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">개인신용정보제공동의</h2>
+                <span class="top_loca_num">
+                    <i>1</i>
+                    <i class="on">2</i>
+                    <i>3</i>
+                </span>
+            </section>
+            <section class="termsA">               
+                <iframe src="https://www.nhqv.com/terms/terms390.jsp" frameborder="0"></iframe>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA cols1vs2">
+                    <a href="javascript:void(0)" class="f_btn btnC1" onclick="layPop.on('fullpop3_1');layPop.off('fullpop3_2')">이전</a>
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.on('fullpop3_3');layPop.off('fullpop3_2')">다음</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+
+
+    <!-- 약관팝업_3-->
+    <div class="layFullPop has_termsA" id="fullpop3_3">
+        <div class="header_c">
+            <a href="javascript:void(0)" class="ico_top_back" onclick="layPop.off('fullpop3_3');"></a>
+            <h1 class="hc_tit">투자자 유의사항</h1>
+            <a href="javascript:void(0)" class="ico_top_x"></a>
+        </div>
+        <div class="container_c has_foot_fix"> 
+            <section class="top_loca">
+                <h2 class="top_loca_tit">비상장주식 거래약관</h2>
+                <span class="top_loca_num">
+                    <i>1</i>
+                    <i>2</i>
+                    <i class="on">3</i>
+                </span>
+            </section>
+            <section class="termsA"> 
+                <iframe src="https://www.nhqv.com/terms/terms392.jsp" frameborder="0"></iframe>
+            </section>
+            <section class="foot_fix">                
+                <div class="foot_fix_btnA cols1vs2">
+                    <a href="javascript:void(0)" class="f_btn btnC1" onclick="layPop.on('fullpop3_2');layPop.off('fullpop3_3')">이전</a>
+                    <a href="javascript:void(0)" class="f_btn btnC2" onclick="layPop.off('fullpop3_3')">동의</a>
+                </div>    
+            </section>
+        </div>
+    </div>
+
+
+  
+    <script>layPop.on('fullpop3_1');</script>
+</body>
+</html> 
